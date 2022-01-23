@@ -39,7 +39,7 @@ PCLK, PRESETn, PREADY, PRDATA are input signals. PCLK is system clock. PADDR, PS
 IDLE is the default state of the APB. when transfer is required the bus moves into the SETUP state, where the appropriate select signal, PSELx is asserted. The bus only remains in the SETUP state for one clock cycle and always moves to the ACCESS state on the next rising edge of the clock. In ACCESS state the enable signal, PENABLE is asserted. The address, write, select, and write data signals must remain stable during the transition from the SETUP to ACCESS state. Exit from the ACCESS state is controlled by the PREADY signal from the slave. If PREADY is held LOW by the slave then the peripheral bus remains in the ACCESS state. If PREADY is driven HIGH by the slave then the ACCESS state is exited and the bus returns to the IDLE state, if no more transfers are required. Alternatively, the bus moves directly to the SETUP state if another transfer follows. Master initiates the Read or Write transaction on the basis of PWRITE signal. It has separate 32 bit wide bus for read and write operation.
 
 <p align="center">
-  <img width="400" height="600" src="https://github.com/iPranjalJoshi/AMBA-APB4-Bridge-Interface/blob/151631b1b6a2fc9d76a15dfed00500151e085ed6/StateDiagram.jpg">
+  <img width="400" height="500" src="https://github.com/iPranjalJoshi/AMBA-APB4-Bridge-Interface/blob/151631b1b6a2fc9d76a15dfed00500151e085ed6/StateDiagram.jpg">
 </p>
 
 
@@ -51,7 +51,7 @@ Full and empty are output from FIFO to Master and they indicate whether the FIFO
 # Sample Output of the Write and Read Transaction
 
 <p align="center">
-  <img width="860" height="480" src="https://github.com/iPranjalJoshi/AMBA-APB4-Bridge-Interface/blob/151631b1b6a2fc9d76a15dfed00500151e085ed6/Write+Read.jpg">
+  <img width="700" height="400" src="https://github.com/iPranjalJoshi/AMBA-APB4-Bridge-Interface/blob/151631b1b6a2fc9d76a15dfed00500151e085ed6/Write+Read.jpg">
 </p>
 
 
